@@ -21,6 +21,17 @@ body{
 .blanco{
 	color: white;
 }
+.fondito{
+	background-color: rgba(0, 0, 0 , 0.6);
+}
+.margensito{
+	margin-top: 6%;
+}
+.centrado{
+	margin-top: 1%;
+	margin-left: 16%;
+	margin-bottom: 2%;
+}
 .title-arch {
 	text-align: center;
 	margin: 50px 0;
@@ -29,19 +40,21 @@ body{
 	text-transform: uppercase;
 	color: #9594A3;
 }
+.margensitoArriba{
+	margin-top: 2%;
+}
 .project {
 	width: 100%;
 	height: 500px;
-	background-image: url(https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/16997709_1249372688473212_6837783475745867615_n.jpg?oh=2563eadf9f591ac2b1900d410579ee9e&oe=5A9555C4);
+	background-image: url(https://i2.wp.com/www.iphonebackgroundwallpapershd.com/wp-content/uploads/2016/06/Coffee-beans-iphone-6-plus-wallpaper-576x1024.jpg?resize=576%2C1024);
 	background-size: cover;
 	background-position: center;
 	padding: 0 !important;
 	float:left;
-	margin: 3px 3px 3px 3px;
 }
 
 .project-2 {
-	background-image: url(https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/23130712_1488519914558487_7927376215065265421_n.jpg?oh=7db01fbbb8a66ffc1fab5ed67aa9face&oe=5A8A308A);
+	background-image: url(https://i.pinimg.com/736x/c8/e9/b8/c8e9b8c19eb0beb032c5211f8f40a850--autumn-coffee-autumn-tea.jpg);
 }
 
 .project-3 {
@@ -49,7 +62,7 @@ body{
 }
 
 .project-4 {
-	background-image: url(https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/20638931_1415111578565988_2895644465840120978_n.jpg?oh=04dff23e34dd31526cd03d5249db3aa1&oe=5AD47BAC	);
+	background-image: url(http://katarinapersson.com/wp-content/uploads/2017/08/terrific-golden-birthday-cake-portrait-excellent-golden-birthday-cake-wallpaper.jpg);
 }
 
 .project-hover {
