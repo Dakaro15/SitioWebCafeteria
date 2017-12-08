@@ -256,13 +256,6 @@
 			@include vendor('transition-delay', '0s');
 			opacity: 0;
 
-			.inner {
-				.toggle {
-					background-image: url('images/close-small.svg') !important;
-					background-size: 32px 32px;
-				}
-			}
-
 			body.fullscreen & {
 				@include vendor('transition-delay', '#{_duration(layout-alt)}');
 				opacity: 1;

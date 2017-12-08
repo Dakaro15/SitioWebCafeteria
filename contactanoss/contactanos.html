@@ -20,6 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="css/slicknav.css">
 		<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/logoTwins.png">
 		
 		
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -75,7 +76,7 @@
     	<div class="line5">					
 			<div class="row Ama">
 				<div class="col-md-12">
-				<h3 class="colorAzul wow animated fadeIn">Contactanos!</h3>
+				<h3 class="colorAzul wow animated fadeIn" data-wow-delay="600ms" data-wow-duration="1s" >Contactanos!</h3>
 				<p>Dinos lo que piensas</p>
 				</div>
 			</div>
@@ -98,14 +99,14 @@
 				</div>
 				<div class="col-md-3 col-xs-12 cont">
 					<ul>
-						<li><i class="fa fa-home"></i>Barrio El Centro</li>
-						<li><i class="fa fa-phone"></i>+504 3232-3232</li>
-						<li><a href="#"><i class="fa fa-envelope"></i>Twinscafe@yahoo.com</li></a>
-						<li><a href="#"><i class="fa fa-twitter"></i>Twitter</li></a>
-						<li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</li></a>
-						<li><a href="#"><i class="fa fa-dribbble"></i>Dribbble</li></a>
-						<li><a href="#"><i class="fa fa-flickr"></i>Flickr</li></a>
-						<li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</li></a>
+						<li class="margenleft colorAzul"><i class="fa fa-home"></i>Barrio El Centro</li>
+						<li class="margenleft colorAzul"><i class="fa fa-phone"></i>+504 3232-3232</li>
+						<li class="margenleft"><a href="#"><i class="fa fa-envelope"></i>Twinscafe@yahoo.com</li></a>
+						<li class="margenleft"><a href="#"><i class="fa fa-twitter"></i>Twitter</li></a>
+						<li class="margenleft"><a href="#"><i class="fa fa-facebook-square"></i>Facebook</li></a>
+						<li class="margenleft"><a href="#"><i class="fa fa-dribbble"></i>Dribbble</li></a>
+						<li class="margenleft"><a href="#"><i class="fa fa-flickr"></i>Flickr</li></a>
+						<li class="margenleft"><a href="#"><i class="fa fa-youtube-play"></i>YouTube</li></a>
 					</ul>
 				</div>
 			</div>
@@ -247,6 +248,43 @@
 			jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true, social_tools: ''});
 			
 		});
+			new WOW().init();
+			$(document).ready(function() {
+				$("body").css("display", "none");
+				$("body").fadeIn(2000);
+				
+				$("a.transicion").click(function(event){
+					event.preventDefault();
+					linkDestino = this.href;
+					$("body").fadeOut(1000, redireccionarPag);      
+				});
+					
+				function redireccionarPag() {
+					window.location = linkDestino;
+				}
+			});
+			$(".revealOnScroll:not(.animated)").each(function () {
+			  var $this     = $(this),
+				  offsetTop = $this.offset().top;
+
+			  if (scrolled + win_height_padded > offsetTop) {
+				if ($this.data('timeout')) {
+				  window.setTimeout(function(){
+					$this.addClass('animated ' + $this.data('animation'));
+				  }, parseInt($this.data('timeout'),10));
+				} else {
+				  $this.addClass('animated ' + $this.data('animation'));
+				}
+			  }
+			});
+			// Hidden...
+			$(".revealOnScroll.animated").each(function (index) {
+			   var $this     = $(this),
+				   offsetTop = $this.offset().top;
+			   if (scrolled + win_height_padded < offsetTop) {
+				 $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+			   }
+			});
 	</script>
 	</body>
 	
