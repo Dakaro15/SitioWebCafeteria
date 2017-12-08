@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="Twins Cafe">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>Twins Café</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="js/jquery-3.2.1.min.js">
+  <link rel="stylesheet" type="text/css" href="jquery.expander.min.js">
+  <link rel="shortcut icon" type="img/x-icon" href="img/logoTwins.png">
+  <script src="js/wow.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
+        <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="Daniel Calderón#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand mx-auto wow animated jackInTheBox" href="#">Twins<span>Café</span></a>
+      <div class="collapse navbar-collapse" id="navbarCollapse1">
+        <ul class="navbar-nav ml-auto">
+         <li class="nav-item"> <a class="nav-link transicion" href="index.html">Home</a> </li>
+        <li class="nav-item active"> <a class="nav-link transicion colorVerde" href="Equipo.html">Equipo</a> <span class="sr-only">(current)</span> </li>
+        <li class="nav-item"> <a class="nav-link transicion" href="galeria.html">Galería</a> </li>
+        <li class="nav-item"> <a class="nav-link transicion" href="contactanoss/contactanos.html">Contactanos</a> </li>
+        </ul>
+      </div>
+            </div>
+    </nav>
+    <div class="row">
+      <section id="team">
+    <div class="container fondito margensito2 wow animated fadeInRightBig">
+      <div class="row">
+          <div class=" text-center col-sm-8 col-sm-offset-2 wow fadeInUp margensitoArriba colorVerde" data-wow-duration="1200ms" data-wow-delay="300ms">
+            <h1 class="colorVerde wow animated fadeInRight">Equipo</h1>
+            <h4 class="colorAzul">Sitio web de cafetería para la clase Desarrollo de portales web,
+                desarrollado por: </h4>
+          </div>
+        </div>
+        <div class="team-members">
+          <div class="row">
+            <div class="col-sm-3 centrado">
+              <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
+                <div class="member-image">
+                  <img class="img-responsive" src="img/team/2.jpg" alt="">
+                </div>
+                <div class="member-info">
+                  <h3 class="colorAzul">Dakaro15</h3>
+                  <h4>Estudiante</h4>
+                </div>
+                <div class="social-icons">
+                  <ul>
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 centrado">
+              <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
+                <div class="member-image">
+                  <img class="img-responsive" src="img/team/3.jpg" alt="">
+                </div>
+                <div class="member-info">
+                  <h3 class="colorAzul">Ramón Diaz</h3>
+                  <h4>Estudiante</h4>
+                </div>
+                <div class="social-icons">
+                  <ul>
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>            
+      </div>
+    </section><!--/#team-->
+    </div>
+  </div>
+        <script>
+          $(document).ready(function() {
+          $("body").css("display", "none");
+          $("body").fadeIn(2000);
+          
+        $("a.transicion").click(function(event){
+          event.preventDefault();
+          linkDestino = this.href;
+          $("body").fadeOut(1000, redireccionarPag);    
+        });
+          
+        function redireccionarPag() {
+          window.location = linkDestino;
+        }
+      });
+            new WOW().init();
+            $(".revealOnScroll:not(.animated)").each(function () {
+        var $this     = $(this),
+            offsetTop = $this.offset().top;
+
+        if (scrolled + win_height_padded > offsetTop) {
+          if ($this.data('timeout')) {
+            window.setTimeout(function(){
+              $this.addClass('animated ' + $this.data('animation'));
+            }, parseInt($this.data('timeout'),10));
+          } else {
+            $this.addClass('animated ' + $this.data('animation'));
+          }
+        }
+      });
+      // Hidden...
+      $(".revealOnScroll.animated").each(function (index) {
+         var $this     = $(this),
+             offsetTop = $this.offset().top;
+         if (scrolled + win_height_padded < offsetTop) {
+           $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+         }
+      });
+        </script>
+</body>
+</html>
