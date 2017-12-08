@@ -9,6 +9,13 @@ body{
 .colorCafesito{
 	color: #321507 !important;
 }
+.yawey{
+	margin-top: -30%;
+}
+.bulto{
+	height: 80px;
+	width: 80px;
+}
 .colorGrisito{
 	color: #907E68 !important;
 }
@@ -24,9 +31,16 @@ body{
 .fondito{
 	background-color: rgba(0, 0, 0 , 0.6);
 }
-.margensito{
-	margin-top: 6%;
+.fondito2xD{
+	background-color: #9594A3!important;
 }
+.margensito{
+	margin-top: 18%;
+}
+.margensito2{
+	margin-top: 10%;
+}
+
 .centrado{
 	margin-top: 1%;
 	margin-left: 16%;
