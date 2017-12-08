@@ -224,8 +224,9 @@ section {
 	color: #000
 }
 .top-bar .navbar-nav .nav-item {
-	margin: 0
+	margin: 0;
 }
+
 .top-bar .nav-link:hover, .top-bar .nav-item.active a {
 	color: #fff;
 	border-bottom: 2px solid #fff;
